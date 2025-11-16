@@ -32,13 +32,13 @@ DRAPE models that tradeoff how detection engineers think in practice:
 
 This mirrors actual triage experience so I encourage you to try it out.
 
-# Implementations
+## Implementations
 - Python: [drapeindex.py](drapeindex.py)
 - Splunk (SPL): [drapeindex.spl](/drapeindex.spl)
 
-# Outpout Example v1.0
+### Outpout Sample (v1.0)
 <p align="center"><img src=drapev1_output.png></p>
 
-# More details
+## More details
 Intro blog post on Detect.FYI website: 
 
