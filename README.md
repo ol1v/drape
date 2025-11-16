@@ -1,5 +1,5 @@
 # DRAPE Index
-![test](logo2.png)
+!(logo_small.png)
 DRAPE stands for Detection Reliability And Precision Efficiency which is basically a unified index (score) that quantifies:
 Reliability → Are the detections actually finding true attacks? (TP)
 Precision Efficiency → Are they doing so with minimal noise? (FP)
