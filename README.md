@@ -32,5 +32,9 @@ DRAPE models that tradeoff how detection engineers think in practice:
 
 This mirrors actual triage experience so I encourage you to try it out.
 
-# Full Blog Post
+# Outpout Example v1.0
+<p align="center"><img src=drapev1_output.png></p>
+
+# More details
+Intro blog post on Detect.FYI website: 
 
