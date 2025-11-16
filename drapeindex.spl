@@ -1,0 +1,12 @@
+| makeresults
+``` Use this code in a macro or simple call it inline inside a search query or dashboard ```
+
+| eval TP=1, FP=1  ``` input example ```
+
+``` Define the weights (FP penalty and TP reward) ```
+| eval k=printf("%.2F", 0.18)
+| eval w=printf("%.2F", 0.22)
+
+| eval indexscore=((log(TP+1)*(1+(w*(TP/(TP+FP)))))-((k*log(FP+1))/(log(TP+1)+1)))
+| eval indexscore=if(TP+FP>0, indexscore, "-")
+| eval indexscore=round(indexscore*10,2)
