@@ -1,4 +1,4 @@
-# DRAPE Index
+# DRAPE: A simple heuristic metric for detection performance
 <p align="center"><img src=logo_small.png></p>
 
 **DRAPE** stands for **D**etection **R**eliability **A**nd **P**recision **E**fficiency which is basically a unified index (score) that quantifies:
@@ -6,7 +6,7 @@
 - **Reliability**: Are the detections actually finding true attacks? (TP)
 - **Precision Efficiency**: Are they doing so with minimal noise? (FP)
 
-The index score can be either negative or positive with the extremes implying the following characteristics:
+The algorithm outputs a simple heuristic metric to score detection performance using TP/FP counts. The index score can be either negative or positive with the extremes implying the following characteristics:
 
 - Negative = noisy, unreliable detection.
 - Positive = precise, efficient, valuable detection.
