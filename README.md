@@ -40,5 +40,5 @@ This mirrors actual triage experience so I encourage you to try it out.
 <p align="center"><img src=drapev1_output.png></p>
 
 ## More details
-Intro blog post on Detect.FYI website: 
+Intro blog post on Detect.FYI website: [https://detect.fyi/introducing-the-drape-index-how-to-measure-in-success-in-a-threat-detection-practice-154fd977f731](https://detect.fyi/introducing-the-drape-index-how-to-measure-in-success-in-a-threat-detection-practice-154fd977f731)
 
