@@ -1,4 +1,4 @@
-# DRAPE: A simple heuristic metric for detection performance
+# DRAPE: A simple heuristic metric for measuring detection performance
 <p align="center"><img src=logo_small.png></p>
 
 **DRAPE** stands for **D**etection **R**eliability **A**nd **P**recision **E**fficiency which is basically a unified index (score) that quantifies:
@@ -13,7 +13,7 @@ The algorithm outputs a simple heuristic metric to score detection performance u
 
 The index is a composite measure of the individual TP/FP data points which can be used to measure detection/rule performance over time.
 
-DRAPE reveals whether a rule is _signal-dominant_ (+) or _noise-dominant_ (–) by inspecting the number of its TP and FPs alerts over a period of time.
+It reveals whether a rule is _signal-dominant_ (+) or _noise-dominant_ (–) by inspecting the number of its TP and FPs alerts over a period of time.
 
 ## How does it work? 
 The formula rewards rules that spots a decent amount of threats (TP) with good precision, while penalizing noisy rules, especially those that haven't yet "proven" themselves with enough TPs.
