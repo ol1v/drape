@@ -1,0 +1,27 @@
+// Get FPs and TPs
+let timestamp = 60d;
+SecurityIncident
+| where TimeGenerated >= ago(timestamp)
+| where Status == "Closed"
+| where isnotempty(Classification)
+| where Classification has_any("TruePostive", "FalsePositive", "BenignPositive")
+| summarize
+      TP = countif(Classification == "TruePositive" or Classification  == "BenignPositive"), // Alter depending on how you use Benign classification
+      FP = countif(Classification == "FalsePositive")
+      by Title
+//*********************
+//** Add DRAPE INDEX ** 
+//*********************
+// Add weights
+| extend
+      k = 0.18,
+      w = 0.22
+// Apply scoring formula
+| extend indexscore =
+        ( log(TP + 1) * (1 + (w * (TP / (TP + FP)))) )
+        - ( (k * log(FP + 1)) / (log(TP + 1) + 1) )
+// Handle divide-by-zero
+| extend indexscore = iff(TP + FP > 0, indexscore, real(null))
+// Scale & round
+| extend indexscore = round(indexscore * 10, 2)
+| project-away k, w
